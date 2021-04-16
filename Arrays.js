@@ -90,6 +90,21 @@ console.log(quantity);
 
 //	8. Поменять местами первую и вторую половину массива, например, для массива 1 2 3 4, результат 3 4 1 2
 
+function arraySwapHalvesNative(arr) {
+    
+      var half = Math.round(arr.length / 2);
+      var out = [];
+      for (var i = half; i < arr.length; i++) {
+          out.push(arr[i]);
+      }
+      for (var j = 0; j < half; j++) {
+          out.push(arr[j]);
+      }
+      return out;
+}
+
+console.log(arraySwapHalvesNative([1, 2, 3, 4]));
+
 
 //	9. Отсортировать массив (пузырьком (Bubble), выбором (Select), вставками (Insert)) 
 

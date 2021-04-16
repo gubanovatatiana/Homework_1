@@ -26,6 +26,34 @@ console.log(isPrime(5));
 
 //3. Найти корень натурального числа с точностью до целого (рассмотреть вариант последовательного подбора и метод бинарного поиска)
 
+function getNumber(num) {
+
+  for (i = 1;i < num; i++ ){
+    var j = i*i;
+    if (num === j) {
+      return (i); 
+    } 
+    if(num < j) {
+      return(i - 1);
+    } 
+  }
+};
+
+console.log(getNumber(25));
+
+function getBinar(num) {
+
+  var a = 1;
+  while(a < num) {
+  var i = (a + num / a) / 2;
+  if  (i === a) break;
+  a = i;
+}
+return Math.round(a);
+};
+
+console.log(getBinar(25));
+
 
 //4.	Вычислить факториал числа n. n! = 1*2*…*n-1*n;
 
